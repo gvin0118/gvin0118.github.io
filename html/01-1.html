@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+	<script src="jwplayer.js" type="text/javascript"></script>  
+    <script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div id="container">Loadingthe player...</div>
+
+<script type="text/javascript">
+
+    jwplayer("container").setup({
+
+        flashplayer: "/jwplayer/player.swf",
+
+        playlist: [
+
+                 { duration: 32, file: "https://cdn.jwplayer.com/videos/8L4m9FJB-TNpruJId.mp4", image:"https://cdn.jsdelivr.net/gh/gvin0118/gvin0118.github.io@main/pic/黑白改彩色（蒙版加钢笔）%20拷贝.jpg"},
+
+                 { duration: 124, file: "https://cdn.jwplayer.com/videos/8L4m9FJB-TNpruJId.mp4", image:"https://cdn.jsdelivr.net/gh/gvin0118/gvin0118.github.io@main/pic/风景32%20拷贝.jpg" },
+
+                 { duration: 542, file: "https://cdn.jwplayer.com/videos/8L4m9FJB-TNpruJId.mp4", image:"https://cdn.jsdelivr.net/gh/gvin0118/gvin0118.github.io@main/pic/合成.jpg" }
+
+        ],
+
+        "playlist.position": "right",
+
+        "playlist.size": 360,
+
+        height: 720,
+
+        width: 1280
+
+    });
+
+</script>
+<div id="container"></div>  
+<input type="button" class="player-play" value="播放" />  
+<input type="button" class="player-stop" value="停止" />  
+<input type="button" class="player-status" value="取得状态" />  
+<input type="button" class="player-current" value="当前播放秒数" />  
+<input type="button" class="player-goto" value="转到第30秒播放" />  
+<input type="button" class="player-length" value="视频时长(秒)" />
+</body>
+	<script type="text/javascript">  
+    var thePlayer;  //保存当前播放器以便操作  
+    $(function() {  
+        thePlayer = jwplayer('container').setup({  
+            flashplayer: 'js/plugins/mediaplayer-5.7/player.swf',  
+            file: 'js/plugins/mediaplayer-5.7/video.mp4',  
+            width: 500,  
+            height: 350,  
+            dock: false  
+        });  
+          
+        //播放 暂停  
+        $('.player-play').click(function() {  
+            if (thePlayer.getState() != 'PLAYING') {  
+                thePlayer.play(true);  
+                this.value = '暂停';  
+            } else {  
+                thePlayer.play(false);  
+                this.value = '播放';  
+            }  
+        });  
+          
+        //停止  
+        $('.player-stop').click(function() { thePlayer.stop(); });  
+          
+        //获取状态  
+        $('.player-status').click(function() {  
+            var state = thePlayer.getState();  
+            var msg;  
+            switch (state) {  
+                case 'BUFFERING':  
+                    msg = '加载中';  
+                    break;  
+                case 'PLAYING':  
+                    msg = '正在播放';  
+                    break;  
+                case 'PAUSED':  
+                    msg = '暂停';  
+                    break;  
+                case 'IDLE':  
+                    msg = '停止';  
+                    break;  
+            }  
+            alert(msg);  
+        });  
+          
+        //获取播放进度  
+        $('.player-current').click(function() { alert(thePlayer.getPosition()); });  
+  
+        //跳转到指定位置播放  
+        $('.player-goto').click(function() {  
+            if (thePlayer.getState() != 'PLAYING') {    //若当前未播放，先启动播放器  
+                thePlayer.play();  
+            }  
+            thePlayer.seek(30); //从指定位置开始播放(单位：秒)  
+        });  
+          
+        //获取视频长度  
+        $('.player-length').click(function() { alert(thePlayer.getDuration()); });  
+    });  
+</script> 
+	
+</html>

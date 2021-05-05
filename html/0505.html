@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>jwplayer(错误 不能显示)</title>
+    <meta content="" name="Keywords">
+    <meta content="" name="Description">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        body,html{margin: 0; padding: 0;}
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/jwplayer.js"></script>
+<script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+<div id="setup">
+    加载0505Loading...
+
+</div>
+
+<script type="text/javascript">
+
+var playerInstance = jwplayer("myElement");
+pjwplayer("myElement").setup({
+  "playlist": "https://cdn.jwplayer.com/v2/media/hWF9vG66",
+  "height": 360,
+  "width": 640,
+  "autostart": "viewable",
+  "advertising": {
+    "client": "vast",
+    "tag": "http://adserver.com/vastTag.xml"
+  }
+});
+       // "width": 1280,//播放器高度
+        //"height": 720,//播放器高度
+        //"repeat":"true",//重复播放（留空则不重复播放）
+        //"autostart":"false",//自动播放（留空则不启用自动播放）
+//});
+
+</script>
+</body>
+</html>

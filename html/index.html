@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>jwplayer</title>
+    <meta content="" name="Keywords">
+    <meta content="" name="Description">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        body,html{margin: 0; padding: 0;}
+        
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="//yoursite.com/yourstyles/myskinfile.css"> </link>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/jwplayer.js"></script>
+<script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+
+<div id="player">
+    Loading...
+</div>
+<script type="text/javascript">
+    var height1 = $(window).height();
+    jwplayer("player").setup({
+        playlist: 'a.json',
+        "file": "http://7xo74u.com1.z0.glb.clouddn.com/o_1bu06jjq4j155kd1i821gk7132n9.mp4",//视频文件路径
+        "playlist": [{
+            "title":"测试视频",
+            "description":"这个真的是是测试视频啦啦啦",
+            "sources": [{
+                "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-Zq6530MP.mp4",
+                "label": "HD",
+            },{
+                "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-Zq6530MP.mp4",
+                "label": "SD",
+            }]
+        }],
+        //"aspectratio": "16:9",//播放器自适应比例
+        "width": "100%",//播放器高度
+        "height": height1,//播放器高度
+        //"type":"mp4",//播放文件类型（可选）
+        "title": "测试标题100",//标题（可选）
+        "description": "测试视频描述",//描述（可选）
+        "image": "https://cdn.jsdelivr.net/gh/gvin0118/gvin0118.github.io@main/pic/合成.jpg",
+        //视频封面（可选）
+        //
+        "repeat":"true",//重复播放（留空则不重复播放）
+        "autostart":"false",//自动播放（留空则不启用自动播放）
+        //defaultBandwidthEstimate: 500,
+        //“abouttext”: “关于”,
+        //“aboutlink”: “/www.jwplayer.com/learn-more”,	
+    });
+ 
+</script>
+ 
+</body>
+</html>

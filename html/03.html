@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+	<script async custom-element="amp-jwplayer" src="https://cdn.ampproject.org/v0/amp-jwplayer-0.1.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>use jw</title>
+
+    <script src="jwplayer/jwplayer.js"></script>
+    <!-- 并非每一个用户独有的身份码，官网给的惟一的，不用改 -->
+    <script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+</head>
+<body>
+    <div id="myElement">Loading the player...</div>
+    <script type="text/javascript">
+    var playerInstance = jwplayer("myElement");
+    playerInstance.setup({
+        file: "http://aliplay.17zuoye.cn/live/27b8bda1a2e2c00ba1de413a019268ea.m3u8",
+        image: "http://img.zidafone.com/test.jpg",
+        width: 1280,
+        height: 720,
+        title: '这是一个视频标题',
+        description: '这句话是里面的小内容提示'
+       // liveSyncDuration: 5
+    });
+    </script>
+</body>
+</html>
+
+

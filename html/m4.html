@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <!--设置语言 ja 日本语 zh 简体中文 -->
+<head>
+<meta charset="utf-8">
+<title>JWPlayer8.0演示-04号测试</title>
+<script>window.pluginPath="jwplayer";</script>
+<link rel="stylesheet" type="text/css" href="//yoursite.com/yourstyles/myskinfile.css"> </link>
+
+
+<script type="text/javascript" src="jwplayer.js"></script>
+<script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+</head>
+<body>
+<div id="jw8"></div>
+<script type="text/javascript">
+jwplayer("jw8").setup({
+ file: "http://aliplay.17zuoye.cn/live/047f2edf2c9e28b76f7eca51c03a63e1.m3u8",
+ type: "mp4",
+    "playlist": [{
+        "title":"测试视频的大标题",
+        "description":"这个真的是是测试视频小内容标题",
+        "sources": [{
+            "file": "http://aliplay.17zuoye.cn/live/27b8bda1a2e2c00ba1de413a019268ea.m3u8",
+            "label": "标清 mp4_ud "
+          },{
+            "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-TNpruJId.mp4",
+            "label": "高清 mp4_hd  "
+        },{
+            "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-cIp6U8lV.mp4",
+            "label": "超清H.264 720px"
+        },{
+            "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-FctPAkow.mp4",
+            "label": "2K H.264 1280px"
+        },{
+            "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-8yQ1cYbs.mp4",
+            "label": "4K H.264 1920px"
+        }]
+    }],
+    //"width": 1920,//http://aliplay.17zuoye.cn/live/047f2edf2c9e28b76f7eca51c03a63e1.m3u8
+    //"height": 1080,//
+    playlistIndex: 5,//播放列表
+    //playbackRateControls: false,//如果为true，则菜单中可用的预定义选项为0.5x，1x，1.25x，1.5x和2x
+   // playbackRates: [0.25，0.75，1，1.25],//自定义播放速率选项以显示在设置菜单中。
+   playbackRateControls: true, //如果为true，则菜单中可用的预定义选项为0.5x，1x，1.25x，1.5x和2x
+   defaultBandwidthEstimate: 50000,	
+    width: "50%",
+  aspectratio: "16:9",
+  //default: true,//仅用于字幕。如果您希望字幕轨道默认显示，则将其设置为true。	
+  //abouttext: “关于”,
+  renderCaptionsNative: false,//true,
+  renderCaptionsNatively: true,
+  qualityLabels:{"2500":"High","1000":"Medium"},//将自定义质量标签应用于kbps的所需带宽，适用于HLS和DASH
+  displaytitle: true,//配置是否应显示媒体文件的标题	
+  controls: true,
+  horizontalVolumeSlider: false,//true,
+  volume: 50,
+  hlsjsdefault: true,
+  loadAndParseHlsMetadata: true,
+});
+</script>
+<a href="https://xiaohuihui.net.cn">本网站为非赢利性站点，本网站所有内容均来源于互联网相关站点自动搜索采集信息，相关链接已经注明来源</a>
+</body>
+</html>
