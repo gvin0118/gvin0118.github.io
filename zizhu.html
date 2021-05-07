@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"><!--字体-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script>window.pluginPath="jwplayer";</script>
+
+    <title>自选m3u8-live-streaming</title>
+    <meta content="" name="Keywords">
+    <meta content="" name="Description">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        /*{
+    "title": "Live Streaming",
+    "description": "This demo shows the JW Player's live streaming capabilities with multiple streams to choose from.",
+    "license": "Business",
+    "showCode": false,
+    "apiCalls": [
+        ""
+    ],
+    "author": {
+        "name": "JW Player",
+        "githubUsername": "jwplayer"
+    },
+    "library": "lqsWlr4Z"
+}*/
+
+        body,html{margin: 0; padding: 0;
+          background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='634' height='634' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' fill-opacity='0.63' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+
+        }
+       /***这是必要的开始***/
+        form {
+	display: inline-flex;
+	align-items: center;
+	padding: 1ch 0;
+	width: 100%;
+}
+
+.ds-textinput {
+	margin: 0 1ch;
+	flex: 1 1 auto;
+}
+.header {
+  /*background-color: #f1f1f1;*/
+  /*padding: 380px;*/
+  text-align: center;
+  font-family: "Sofia";
+  /*font-size: 22px;*/
+}
+#player {
+        border-radius: 25px; /*播放器圆角*/
+        
+        width: auto;
+        height: auto;  
+        margin:0 auto;  
+    }
+    .z{
+        bottom:0;
+        width:100%;
+        height:200px;
+        
+        text-align: center;
+        /*font-size: 8px;*/
+        margin: 0;
+        padding: 1px 2px;
+        font-family: "Sofia";
+        /*font-size: 22px;*/
+}
+    .footer{
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:80px;
+        font-family: 'Arimo';
+        text-align: center;
+        font-size: 8px;
+        margin: 0;
+        padding: 1px 2px;
+        }
+        .jw-button-image {
+	background-size: 45%;
+	opacity: 1;
+}
+.footerz{
+        
+        font-size: 18px;
+        
+        }
+        .jw-button-image {
+	background-size: 45%;
+	opacity: 1;
+}
+/*这是必要的结束*/
+    </style>
+</head>
+<body>
+    <!--ZIJIA-->
+    <link rel="stylesheet" type="text/css" href="//yoursite.com/yourstyles/myskinfile.css"> </link>
+
+   <!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>A-->
+<script type="text/javascript" src="jwplayer/8.20.4/jwplayer.js"></script>
+<script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+  <!--ZIJIA-->
+  <div class="header">
+    <h1>Gvin</h1>
+  </div>
+  <!----->
+<div id="player"></div>
+
+<form id="demo-form" autocomplete="off">
+	<select class="ds-select" id="load-m3u8">
+		<option value="https://nhkworld.webcdn.stream.ne.jp/www11/nhkworld-tv/zh/725580/livecom_zh.m3u8">NHK华语视界</option>
+		<option value="http://slive.ytn.co.kr:1935/dmb/ydlive_20140419_1/playlist.m3u8">YTN DMB</option>
+    <option value="http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8">韩国Arirang</option>
+    <option value="http://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8">美国Newsmax TV</option><!--带字幕-->
+    <option value="http://cbsnewshd-lh.akamaihd.net/i/CBSNHD_7@199302/master.m3u8">美国CBS News</option>
+    <option value="http://live.cgtn.com/1000/prog_index.m3u8">美国CGTN </option><!--备用 http://live.cgtn.com/500/prog_index.m3u8    -->
+    <option value="http://tscstreaming-lh.akamaihd.net/i/TSCLiveStreaming_1@91031/master.m3u8">加拿大The Shopping Channel </option><!--备用     -->
+    <option value="http://cbcnewshd-f.akamaihd.net/i/cbcnews_1@8981/index_2500_av-p.m3u8">加拿大CBC News (VOD) </option><!--备用     -->
+    <option value="http://wowzaprod134-i.akamaihd.net/hls/live/577814/ccddaf02/playlist.m3u8">美国Jewelry Television </option><!--备用     -->
+    <option value="http://antvlive.ab5c6921.cdnviet.com/antv/playlist.m3u8">越南ANTVHD </option><!--备用     -->
+    <option value="http://unilivemtveu-lh.akamaihd.net/i/mtvno_1@346424/master.m3u8">英国MTV </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8">央视CCTV-1综合HD </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv2.m3u8">央视CCTV-2财经 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv4.m3u8">央视CCTV-4国际 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv5phd.m3u8">央视CCTV-5+体育 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8">央视CCTV-6高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv7.m3u8">央视CCTV-7军事农业 </option><!--备用     -->
+    <!--<option value="http://ivi.bupt.edu.cn/hls/cctv9.m3u8">央视CCTV-9纪录 </option> 备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv10.m3u8">央视CCTV-10科教 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv11.m3u8">央视CCTV-11戏曲 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv12.m3u8">央视CCTV-12社会与法 </option><!--备用     -->
+    <!--<option value="http://ivi.bupt.edu.cn/hls/cctv13.m3u8">央视CCTV-13新闻 </option> 备用     -->
+    <!--<option value="http://ivi.bupt.edu.cn/hls/cctv14.m3u8">央视CCTV-14少儿 </option>备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cctv15.m3u8">央视CCTV-15音乐 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/hunanhd.m3u8">湖南卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/jshd.m3u8">江苏卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/dfhd.m3u8">东方卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/szhd.m3u8">深圳卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/gdhd.m3u8">广东卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/tjhd.m3u8">天津卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/hbhd.m3u8">湖北卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/hbtv.m3u8">湖北卫视 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/cqhd.m3u8">重庆卫视高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/lntv.m3u8">辽宁卫视 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/dntv.m3u8">福建东南卫视 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/btv1.m3u8">北京卫视 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/btv2hd.m3u8">北京文艺高清 </option><!--备用     -->
+    <option value="http://ivi.bupt.edu.cn/hls/btv4.m3u8">北京影视 </option><!--备用     -->
+
+		<option value="">播放M3U8...视频</option>
+	</select>
+	<input class="ds-textinput" type="text" id="custom-url" />
+	<button id="load-it" class="ds-button--primary">确认</button>
+</form>
+<div class="z">
+<p>
+ 直播1.0
+</p>
+</div>
+<script>
+    
+    //*   *//
+    const urlField = document.getElementById('custom-url');
+    const loadButton = document.getElementById('load-it');
+    const loadSelect = document.getElementById('load-m3u8');
+    
+    loadButton.addEventListener('click', e => {
+      const file = urlField.value;
+      e.preventDefault();
+      if (file) {
+        playerInstance.load({ file });
+      }
+    }, false);
+    
+    loadSelect.addEventListener('change', function() {
+      urlField.value = this.value;
+      urlField.disabled = !!this.value;
+    }, false);
+    
+    const playerInstance = jwplayer('player').setup({
+      file: [...loadSelect.querySelectorAll('option')].find(o => !!o.value).value
+    });
+    
+    loadSelect.dispatchEvent(new Event('change'));</script>
+    <div class="footer" >
+      <p>
+        想在黄昏送你一场梦,载着相思的喜悦和宇宙中的星星。</br>
+        "Want to send you a dream in the evening, with the joy of lovesickness and the stars of the universe"</br>
+        不过都是半途而废</br>
+        ”But it's all half way away.</br>
+      </p>
+      <p>
+        不过都是半途而废
+        
+        ”But it's all half way away.
+      </p>
+      <p class="footerz"> I l i n s . c n | G v i n . c n</p>
+      <p>@GVIN.CN/@ILINS.CN.本网站为非赢利性站点，本网站所有内容均来源于互联网相关站点自动搜索采集信息，相关链接已经注明来源</p>
+    </div>
+</body>
+<!--带字幕-->
+
+</html>
