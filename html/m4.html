@@ -3,16 +3,57 @@
     <!--设置语言 ja 日本语 zh 简体中文 -->
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <title>JWPlayer8.0演示-04号测试</title>
 <script>window.pluginPath="jwplayer";</script>
-<link rel="stylesheet" type="text/css" href="//yoursite.com/yourstyles/myskinfile.css"> </link>
+<link rel="stylesheet" type="text/css" href="//123/yoursite.com/yourstyles/myskinfile.css"> </link>
 
 
 <script type="text/javascript" src="jwplayer.js"></script>
 <script>jwplayer.key="PY9vyvKtR3Gx7aUMwjPJYG/c/zRrEvif7BB86A==";</script>
+<style> 
+
+    #zi {
+        text-align: center;  
+    }
+    #jw8 {
+        border-radius: 25px;
+        
+        width: auto;
+        height: auto;  
+        margin:0 auto;  
+    }
+    body {
+        /**/
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17119/cuadros.png");
+        /*background-color: #ffffff;*/
+        background: url(logo.svg) no-repeat top left;
+        background-size: contain;
+        margin: 0;
+  font-family: "Sofia";
+  font-size: 22px;
+}
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+/* 页脚 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #f1f1f1;
+  margin-top: 20px;
+}
+    </style>
 </head>
 <body>
-<div id="jw8"></div>
+    <div class="header">
+        <h1>Gvin</h1>
+      </div>
+<div id="jw8" >
+</div>
+
 <script type="text/javascript">
 jwplayer("jw8").setup({
  file: "http://aliplay.17zuoye.cn/live/047f2edf2c9e28b76f7eca51c03a63e1.m3u8",
@@ -21,7 +62,7 @@ jwplayer("jw8").setup({
         "title":"测试视频的大标题",
         "description":"这个真的是是测试视频小内容标题",
         "sources": [{
-            "file": "http://aliplay.17zuoye.cn/live/27b8bda1a2e2c00ba1de413a019268ea.m3u8",
+            "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-Zq6530MP.mp4",
             "label": "标清 mp4_ud "
           },{
             "file": "https://cdn.jwplayer.com/videos/8L4m9FJB-TNpruJId.mp4",
@@ -44,7 +85,7 @@ jwplayer("jw8").setup({
    // playbackRates: [0.25，0.75，1，1.25],//自定义播放速率选项以显示在设置菜单中。
    playbackRateControls: true, //如果为true，则菜单中可用的预定义选项为0.5x，1x，1.25x，1.5x和2x
    defaultBandwidthEstimate: 50000,	
-    width: "50%",
+    width: "80%",
   aspectratio: "16:9",
   //default: true,//仅用于字幕。如果您希望字幕轨道默认显示，则将其设置为true。	
   //abouttext: “关于”,
@@ -59,6 +100,11 @@ jwplayer("jw8").setup({
   loadAndParseHlsMetadata: true,
 });
 </script>
-<a href="https://xiaohuihui.net.cn">本网站为非赢利性站点，本网站所有内容均来源于互联网相关站点自动搜索采集信息，相关链接已经注明来源</a>
+<h3 id="zi">测试1.0</h3>
+<div class="footer">
+    <h2>ILINS.CN</h2>
+    <a href="https://xiaohuihui.net.cn">GVIN.CN/ILINS.CN.本网站为非赢利性站点，本网站所有内容均来源于互联网相关站点自动搜索采集信息，相关链接已经注明来源</a>
+  </div>
+
 </body>
 </html>
